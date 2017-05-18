@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="463.0" prefWidth="740.0" style="-fx-background-color: white;" stylesheets="@JMetroDarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProfilRandonneurController">
+    <children>
+      <Label fx:id="error_num_tel" layoutX="224.0" layoutY="130.0" prefHeight="17.0" prefWidth="169.0" textFill="RED" />
+      <Label fx:id="error_mail" layoutX="224.0" layoutY="203.0" prefHeight="17.0" prefWidth="169.0" textFill="RED" />
+      <Label fx:id="error_pswd" layoutX="225.0" layoutY="275.0" prefHeight="17.0" prefWidth="169.0" textFill="#f10c0c" />
+      <JFXTextField fx:id="txt_nom" editable="false" focusColor="#7ef423" layoutX="561.0" prefHeight="25.0" prefWidth="135.0" promptText="Nom" unFocusColor="#2196f3" />
+      <JFXTextField fx:id="txt_prenom" editable="false" focusColor="#7ef423" layoutX="467.0" prefHeight="25.0" prefWidth="78.0" promptText="Prenom" unFocusColor="#2196f3" />
+      <JFXTextField fx:id="txt_numtel" focusColor="#7ef423" layoutX="224.0" layoutY="95.0" prefHeight="25.0" prefWidth="169.0" promptText="Phone" unFocusColor="#2196f3" />
+      <JFXTextField fx:id="txt_mail" focusColor="#7ef423" layoutX="225.0" layoutY="167.0" prefHeight="25.0" prefWidth="169.0" promptText="Mail" unFocusColor="#2196f3" />
+      <JFXTextField fx:id="txt_username" editable="false" focusColor="#7ef423" layoutX="65.0" layoutY="2.0" prefHeight="25.0" prefWidth="135.0" promptText="LOGIN" unFocusColor="#2196f3" />
+      <JFXPasswordField fx:id="txt_psw" focusColor="#7ef423" layoutX="224.0" layoutY="241.0" prefHeight="25.0" prefWidth="169.0" promptText="Mot de passe" unFocusColor="#2196f3" />
+      <Label layoutX="14.0" layoutY="66.0" prefHeight="17.0" prefWidth="61.0" text="Randonni" textFill="#0b7c20">
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgshow" fitHeight="111.0" fitWidth="112.0" layoutX="524.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" />
+      <JFXTextField fx:id="url_image" layoutX="467.0" layoutY="211.0" unFocusColor="#2196f3" visible="false" />
+      <Label layoutX="164.0" layoutY="108.0" text="Phone :" />
+      <Label layoutX="171.0" layoutY="171.0" prefHeight="17.0" prefWidth="33.0" text="Mail :" />
+      <Label layoutX="204.0" layoutY="6.0" text="Connecté" textFill="#2f95e8" />
+      <Label layoutX="132.0" layoutY="245.0" text="Mot de passe :" />
+      <JFXButton fx:id="btn_retour" buttonType="RAISED" layoutX="14.0" layoutY="409.0" prefHeight="33.0" prefWidth="100.0" text="Retour" />
+      <JFXPasswordField fx:id="txt_verifpsw" focusColor="#7ef423" labelFloat="true" layoutX="224.0" layoutY="305.0" prefHeight="25.0" prefWidth="169.0" promptText="Retaper mot de passe" unFocusColor="#2196f3" />
+      <JFXButton fx:id="btn_ajouter" buttonType="RAISED" layoutX="314.0" layoutY="409.0" onAction="#modif_Action" prefHeight="33.0" prefWidth="112.0" text="Modifier" />
+      <JFXButton fx:id="browse" buttonType="RAISED" layoutX="523.0" layoutY="167.0" onAction="#ModifierImage" prefHeight="33.0" prefWidth="125.0" text="Photo Profil" />
+      <JFXTextField fx:id="txt_pt_fidel" editable="false" focusColor="#2196f3" labelFloat="true" layoutX="550.0" layoutY="241.0" prefHeight="25.0" prefWidth="61.0" promptText="Points de fidelité" unFocusColor="#7ef423" />
+    </children>
+</AnchorPane>

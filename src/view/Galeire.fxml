@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.GaleireController">
+   <children>
+      <TitledPane fx:id="tp" animated="false" layoutX="91.0" layoutY="45.0" prefHeight="278.0" prefWidth="315.0" text="Randonnées">
+         <content>
+            <ScrollPane fx:id="sp" prefHeight="200.0" prefWidth="200.0">
+               <content>
+                  <ImageView fx:id="img" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+               </content>
+            </ScrollPane>
+         </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ModifMatController">
+   <children>
+      <Label layoutX="39.0" layoutY="95.0" text="Nom" />
+      <Label layoutX="39.0" layoutY="156.0" text="Reference" />
+      <Label layoutX="39.0" layoutY="212.0" text="Prix" />
+      <Label layoutX="29.0" layoutY="279.0" text="Description" />
+      <Label layoutX="363.0" layoutY="165.0" text="Type" />
+      <Label layoutX="363.0" layoutY="212.0" text="Etat" />
+      <Label layoutX="354.0" layoutY="109.0" text="Quantite" />
+      <JFXTextField fx:id="txt_nom" focusColor="#7ef423" layoutX="102.0" layoutY="92.0" unFocusColor="#2196f3" />
+      <JFXTextField fx:id="txt_ref" focusColor="#7ef423" layoutX="102.0" layoutY="153.0" unFocusColor="#2196f3" />
+      <JFXTextField fx:id="txt_prix" focusColor="#7ef423" layoutX="102.0" layoutY="208.0" unFocusColor="#2196f3" />
+      <JFXTextField fx:id="txt_desc" focusColor="#7ef423" layoutX="102.0" layoutY="266.0" unFocusColor="#2196f3" />
+      <JFXTextField fx:id="txt_quant" focusColor="#7ef423" layoutX="414.0" layoutY="100.0" unFocusColor="#2196f3" />
+      <JFXComboBox fx:id="combo_type" focusColor="#7ef423" layoutX="433.0" layoutY="161.0" unFocusColor="#2196f3" />
+      <JFXComboBox fx:id="combo_etat" focusColor="#7ef423" layoutX="433.0" layoutY="217.0" unFocusColor="#2196f3" />
+      <JFXButton fx:id="btn_modif" layoutX="435.0" layoutY="322.0" onAction="#ModifMat" prefHeight="25.0" prefWidth="127.0" style="-fx-background-color: #7EF423;" text="Modifier Materiel" textFill="WHITE" />
+      <JFXTextField fx:id="txt_id" layoutX="126.0" layoutY="322.0" visible="false" />
+      <JFXButton fx:id="id_btn" buttonType="RAISED" layoutX="13.0" layoutY="361.0" onAction="#retour" style="-fx-background-color: #7EF423;" text="Retour" textFill="WHITE" />
+   </children>
+</AnchorPane>

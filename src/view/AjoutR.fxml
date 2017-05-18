@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AjoutRController">
+   <children>
+      <Label layoutX="25.0" layoutY="105.0" />
+      <Label layoutX="22.0" layoutY="160.0" />
+      <Label layoutX="25.0" layoutY="61.0" />
+      <Label layoutX="24.0" layoutY="261.0" />
+      <JFXTextField fx:id="client_txt" focusColor="#7ef423" labelFloat="true" layoutX="129.0" layoutY="57.0" prefHeight="25.0" prefWidth="174.0" promptText="mail client" unFocusColor="#2196f3" />
+      <JFXTextField fx:id="desc_txt" focusColor="#7ef423" labelFloat="true" layoutX="129.0" layoutY="110.0" prefHeight="25.0" prefWidth="174.0" promptText="Description" unFocusColor="#2196f3" />
+      <JFXTextField focusColor="#7ef423" labelFloat="true" layoutX="407.0" layoutY="144.0" promptText="Id materiel" unFocusColor="#2196f3" visible="false" />
+      <DatePicker fx:id="achat_date" layoutX="119.0" layoutY="209.0" promptText="Date achat" />
+      <DatePicker fx:id="achat_txt" layoutX="119.0" layoutY="244.0" visible="false" />
+      <JFXButton fx:id="envoi_id" buttonType="RAISED" layoutX="536.0" layoutY="350.0" onAction="#AddRec" style="-fx-background-color: #7EF423;" text="Envoyer" textFill="WHITE" />
+      <Label layoutX="177.0" layoutY="14.0" prefHeight="39.0" prefWidth="246.0" text="Ajouter Reclamation" textFill="#c6f568">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="25.0" />
+         </font></Label>
+      <JFXComboBox fx:id="rec_txt" focusColor="#7ef423" labelFloat="true" layoutX="124.0" layoutY="156.0" prefHeight="25.0" prefWidth="174.0" promptText="Type Reclamation" unFocusColor="#2196f3" />
+      <JFXButton fx:id="ret_btn" buttonType="RAISED" layoutX="14.0" layoutY="337.0" onAction="#retour" ripplerFill="WHITE" style="-fx-background-color: #7EF423;" text="Retour" textFill="WHITE" />
+      <Label fx:id="txt_err" layoutX="342.0" layoutY="70.0" prefHeight="17.0" prefWidth="194.0" textFill="RED" />
+      <Label fx:id="desc_err" layoutX="342.0" layoutY="114.0" prefHeight="17.0" prefWidth="194.0" textFill="RED" />
+      <Label fx:id="err_id" layoutX="342.0" layoutY="274.0" prefHeight="17.0" prefWidth="194.0" textFill="RED" />
+      <JFXComboBox fx:id="id_txt" focusColor="#7ef423" layoutX="119.0" layoutY="257.0" prefHeight="25.0" prefWidth="174.0" promptText="Refernce de votre materiel" unFocusColor="#2196f3" />
+   </children>
+</AnchorPane>

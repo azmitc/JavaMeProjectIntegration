@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="491.0" prefWidth="622.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ListeReclamationController">
+   <children>
+      <AnchorPane layoutX="-28.0" layoutY="-7.0" prefHeight="439.0" prefWidth="613.0">
+         <children>
+            <AnchorPane layoutX="-18.0" prefHeight="532.0" prefWidth="753.0">
+               <children>
+                  <Label layoutX="282.0" layoutY="30.0" prefHeight="34.0" prefWidth="274.0" text="Liste des Reclamations" textFill="#a6e45a">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="25.0" />
+                     </font></Label>
+                  <TableView fx:id="table_rec" layoutX="46.0" layoutY="97.0" prefHeight="245.0" prefWidth="622.0">
+                    <columns>
+                      <TableColumn fx:id="col_idr" prefWidth="40.0" text="id" />
+                      <TableColumn fx:id="col_desc" prefWidth="86.0" text="description" />
+                        <TableColumn fx:id="col_rec" prefWidth="102.0" text="type reclamation" />
+                        <TableColumn fx:id="col_da" prefWidth="90.0" text="date-achat" />
+                        <TableColumn fx:id="col_de" prefWidth="85.0" text="date-envoie" />
+                        <TableColumn fx:id="col_rm" prefWidth="129.0" text="reference materiel" />
+                        <TableColumn fx:id="col_idc" prefWidth="91.0" text="mail client" />
+                    </columns>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </TableView>
+                  <JFXButton fx:id="rte_btn" buttonType="RAISED" layoutX="53.0" layoutY="446.0" onAction="#retour" style="-fx-background-color: #7EF423;" text="Retour" textFill="WHITE" />
+                  <JFXButton fx:id="supp_btn" buttonType="RAISED" layoutX="581.0" layoutY="367.0" onAction="#delete" style="-fx-background-color: #7EF423;" text="Supprimer" textFill="WHITE" />
+                  <JFXButton fx:id="rep_btn" buttonType="RAISED" layoutX="478.0" layoutY="367.0" onAction="#gomail_btn" style="-fx-background-color: #7EF423;" text="Repondre" textFill="WHITE" />
+                  <TextField fx:id="txt_id" layoutX="91.0" layoutY="367.0" visible="false" />
+                  <JFXButton fx:id="btn_pdf" buttonType="RAISED" layoutX="369.0" layoutY="367.0" onAction="#pdf" style="-fx-background-color: #7EF423;" text="Generer PDF" textFill="WHITE" />
+                  <JFXTextField fx:id="mail_txt" layoutX="60.0" layoutY="407.0" visible="false" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

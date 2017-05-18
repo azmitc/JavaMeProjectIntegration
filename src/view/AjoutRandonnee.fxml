@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AjoutRandonneeController">
+   <children>
+      <Label layoutX="41.0" layoutY="25.0" text="Image :" />
+      <Label layoutX="37.0" layoutY="81.0" text="Date de Départ :" />
+      <Label layoutX="327.0" layoutY="81.0" text="Date de Retour :" />
+      <Label layoutX="36.0" layoutY="122.0" text="Heure de Départ :" />
+      <Label layoutX="323.0" layoutY="122.0" text="Heure de Retour :" />
+      <Label layoutX="40.0" layoutY="182.0" text="Prix :" />
+      <Label layoutX="39.0" layoutY="244.0" text="Lieu :" />
+      <Label layoutX="337.0" layoutY="253.0" text="Circuit :" />
+      <Label layoutX="336.0" layoutY="182.0" text="Niveau :" />
+      <Label layoutX="33.0" layoutY="299.0" text="Equipements :" />
+      <Label layoutX="337.0" layoutY="363.0" text="Description :" />
+      <Label layoutX="31.0" layoutY="363.0" text="Catégorie :" />
+      <Label layoutX="335.0" layoutY="308.0" text="Autorisation :" />
+      <Label layoutX="34.0" layoutY="413.0" text="Guide :" />
+      <Label layoutX="28.0" layoutY="459.0" text="Organisateur :" />
+      <JFXButton fx:id="browse_btn" layoutX="127.0" layoutY="21.0" onAction="#afficherimage" style="-fx-background-color: #7EF423;" text="Choisir un fichier" textFill="WHITE" />
+      <JFXTextField fx:id="prix_txt" labelFloat="true" layoutX="151.0" layoutY="178.0" unFocusColor="#2196f3" />
+      <JFXTextField fx:id="lieu_txt" labelFloat="true" layoutX="151.0" layoutY="240.0" unFocusColor="#2196f3" />
+      <JFXTextField fx:id="circuit_txt" labelFloat="true" layoutX="442.0" layoutY="240.0" unFocusColor="#2196f3" />
+      <JFXTextField fx:id="equip_txt" labelFloat="true" layoutX="151.0" layoutY="295.0" unFocusColor="#2196f3" />
+      <JFXComboBox fx:id="niveau_cb" labelFloat="true" layoutX="442.0" layoutY="178.0" unFocusColor="#2196f3" />
+      <JFXTextArea fx:id="desc_txt" labelFloat="true" layoutX="442.0" layoutY="361.0" prefHeight="88.0" prefWidth="135.0" unFocusColor="#2196f3" />
+      <JFXComboBox fx:id="cat_cb" labelFloat="true" layoutX="152.0" layoutY="359.0" unFocusColor="#2196f3" />
+      <JFXComboBox fx:id="guide_cb" labelFloat="true" layoutX="152.0" layoutY="409.0" unFocusColor="#2196f3" />
+      <JFXComboBox fx:id="org_cb" labelFloat="true" layoutX="152.0" layoutY="464.0" unFocusColor="#2196f3" />
+      <JFXTextField fx:id="ss" labelFloat="true" layoutX="645.0" layoutY="77.0" prefHeight="25.0" prefWidth="87.0" unFocusColor="#2196f3" visible="false" />
+      <JFXButton fx:id="affiche_btn" layoutX="527.0" layoutY="517.0" style="-fx-background-color: #7EF423;" text="Passer à l'Affichage" textFill="WHITE" />
+      <JFXButton fx:id="ajout_btn" layoutX="661.0" layoutY="517.0" style="-fx-background-color: #7EF423;" text="Ajouter" textFill="WHITE" />
+      <Label layoutX="22.0" layoutY="521.0" text="Nombre de Places :" />
+      <JFXTextField fx:id="nbrplace_txt" layoutX="151.0" layoutY="517.0" prefHeight="25.0" prefWidth="67.0" unFocusColor="#2196f3" />
+      <ImageView fx:id="imgshow" fitHeight="69.0" fitWidth="71.0" layoutX="653.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" />
+      <JFXDatePicker fx:id="dated_pic" layoutX="147.0" layoutY="76.0" prefHeight="28.0" prefWidth="148.0" />
+      <JFXDatePicker fx:id="dater_pic" layoutX="442.0" layoutY="76.0" prefHeight="28.0" prefWidth="148.0" />
+      <JFXDatePicker fx:id="hd_txt" layoutX="146.0" layoutY="125.0" prefHeight="28.0" prefWidth="148.0" showTime="true" />
+      <JFXDatePicker fx:id="hr_txt" layoutX="442.0" layoutY="117.0" prefHeight="28.0" prefWidth="148.0" showTime="true" />
+      <JFXButton fx:id="retour_btn" layoutX="663.0" layoutY="561.0" style="-fx-background-color: #7EF423;" text="Retour" textFill="WHITE" />
+      <JFXButton fx:id="browse1_btn" layoutX="444.0" layoutY="304.0" onAction="#afficherimage1" style="-fx-background-color: #7EF423;" text="Choisir un fichier" textFill="WHITE" />
+      <JFXTextField fx:id="ss1" layoutX="578.0" layoutY="308.0" visible="false" />
+      <ImageView fx:id="imgv" fitHeight="88.0" fitWidth="67.0" layoutX="620.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="prix_lbl" layoutX="147.0" layoutY="203.0" prefHeight="17.0" prefWidth="148.0" />
+      <Label fx:id="nbpl_lbl" layoutX="147.0" layoutY="542.0" prefHeight="17.0" prefWidth="126.0" />
+      <Label fx:id="cir_lbl" layoutX="442.0" layoutY="270.0" prefHeight="17.0" prefWidth="135.0" />
+      <Label fx:id="lieu_lbl" layoutX="151.0" layoutY="270.0" prefHeight="17.0" prefWidth="135.0" />
+      <Label fx:id="desc_lbl" layoutX="444.0" layoutY="459.0" prefHeight="17.0" prefWidth="135.0" />
+      <Label fx:id="equip_lbl" layoutX="152.0" layoutY="325.0" prefHeight="17.0" prefWidth="126.0" />
+      
+   </children>
+</AnchorPane>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="463.0" prefWidth="740.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.inscriptionController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Label fx:id="error_nom" layoutX="347.0" layoutY="42.0" prefHeight="17.0" prefWidth="125.0" />
+      <Label fx:id="error_prenom" layoutX="342.0" layoutY="82.0" prefHeight="17.0" prefWidth="135.0" />
+      <Label fx:id="error_num_tel" layoutX="347.0" layoutY="120.0" prefHeight="17.0" prefWidth="125.0" />
+      <Label fx:id="error_cin" layoutX="346.0" layoutY="159.0" prefHeight="17.0" prefWidth="135.0" />
+      <Label fx:id="error_mail" layoutX="348.0" layoutY="211.0" prefHeight="17.0" prefWidth="135.0" />
+      <Label fx:id="error_username" layoutX="359.0" layoutY="263.0" prefHeight="17.0" prefWidth="171.0" />
+      <Label fx:id="error_role" layoutX="342.0" layoutY="361.0" prefHeight="17.0" prefWidth="135.0" />
+      <Label fx:id="error_pswd" layoutX="359.0" layoutY="311.0" prefHeight="17.0" prefWidth="171.0" textFill="#f10c0c" />
+      <JFXTextField fx:id="txt_nom" focusColor="#2196f3" labelFloat="true" layoutX="195.0" layoutY="29.0" promptText="Nom" unFocusColor="#7ef423" />
+      <JFXTextField fx:id="txt_prenom" focusColor="#2196f3" labelFloat="true" layoutX="195.0" layoutY="69.0" promptText="Prenom" unFocusColor="#7ef423" />
+      <JFXTextField fx:id="txt_numtel" focusColor="#2196f3" labelFloat="true" layoutX="195.0" layoutY="108.0" promptText="Phone" unFocusColor="#7ef423" />
+      <JFXTextField fx:id="txt_cin" focusColor="#2196f3" labelFloat="true" layoutX="195.0" layoutY="155.0" promptText="CIN" unFocusColor="#7ef423" />
+      <JFXTextField fx:id="txt_mail" focusColor="#2196f3" labelFloat="true" layoutX="195.0" layoutY="207.0" promptText="Mail" unFocusColor="#7ef423" />
+      <JFXTextField fx:id="txt_username" focusColor="#2196f3" labelFloat="true" layoutX="195.0" layoutY="259.0" promptText="LOGIN" unFocusColor="#7ef423" />
+      <JFXPasswordField fx:id="txt_psw" focusColor="#2196f3" labelFloat="true" layoutX="195.0" layoutY="307.0" promptText="Mot de passe" unFocusColor="#7ef423" />
+      <JFXComboBox fx:id="txt_role" focusColor="#2196f3" labelFloat="true" layoutX="195.0" layoutY="357.0" promptText="Role" unFocusColor="#7ef423" />
+      <JFXButton fx:id="btn_ajouter" buttonType="RAISED" layoutX="296.0" layoutY="404.0" prefHeight="33.0" prefWidth="100.0" style="-fx-background-color: #7EF423;" text="S'inscrire" textFill="#fffefe" />
+      <Label layoutX="14.0" layoutY="66.0" prefHeight="17.0" prefWidth="61.0" text="Randonni" textFill="#0b7c20">
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="62.0" fitWidth="50.0" layoutX="14.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pics/logo.png" />
+         </image>
+      </ImageView>
+      <DatePicker fx:id="birthday" layoutX="342.0" layoutY="357.0" promptText="Date de naissance" />
+      <ImageView fx:id="imgshow" fitHeight="111.0" fitWidth="112.0" layoutX="483.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true" />
+      <JFXButton fx:id="browse" buttonType="RAISED" layoutX="503.0" layoutY="244.0" onAction="#AfficherImage" style="-fx-background-color: #7EF423;" text="Photo Profil" textFill="#fffbfb" />
+      <JFXTextField fx:id="url_image" layoutX="434.0" layoutY="232.0" visible="false" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="530.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pics/rejoingnez.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btn_fb" buttonType="RAISED" layoutX="547.0" layoutY="404.0" onAction="#authUser" prefHeight="34.0" prefWidth="166.0" style="-fx-background-color: #1A2EB5;" text="Se connecter avec Facebook" textFill="#f2f2f2" />
+    </children>
+</AnchorPane>

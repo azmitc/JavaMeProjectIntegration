@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AccueilFrontController">
+    <stylesheets>
+        <URL value="@JMetroDarkTheme.css" />
+    </stylesheets>
+   <children>
+      <JFXButton fx:id="btn_Profil" buttonType="RAISED" layoutX="277.0" layoutY="52.0" text="Profil" />
+      <JFXButton fx:id="btn_materiel" buttonType="RAISED" layoutX="121.0" layoutY="240.0" prefHeight="33.0" prefWidth="183.0" text="Voir materiel" />
+      <JFXButton fx:id="btn_voirFB" buttonType="RAISED" layoutX="327.0" layoutY="124.0" prefHeight="33.0" prefWidth="183.0" text="Randonni FaceBook" />
+      <JFXButton fx:id="btn_deconnect" buttonType="RAISED" layoutX="223.0" layoutY="330.0" prefHeight="33.0" prefWidth="163.0" style="-fx-background-color: red;" text="Se deconnecter" />
+      <Hyperlink fx:id="contact_link" layoutX="496.0" layoutY="363.0" text="Contactez nous" />
+      <ImageView fitHeight="43.0" fitWidth="44.0" layoutX="14.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pics/logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="11.0" layoutY="51.0" text="Randonni" textFill="#258318">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btn_rec" buttonType="RAISED" layoutX="327.0" layoutY="184.0" prefHeight="33.0" prefWidth="183.0" text="Reclamer" />
+      <JFXButton fx:id="Reserv" layoutX="121.0" layoutY="184.0" prefHeight="33.0" prefWidth="183.0" text="Gerer Reservation" />
+      <JFXButton fx:id="OrjBtn" layoutX="121.0" layoutY="124.0" prefHeight="33.0" prefWidth="183.0" text="Randonnee" />
+      <JFXButton fx:id="SujBtn" layoutX="327.0" layoutY="240.0" prefHeight="33.0" prefWidth="183.0" text="Sujets" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="604.0" prefWidth="774.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SujetAdminController">
+   <children>
+      <TableView fx:id="tabSuj" layoutX="14.0" layoutY="48.0" prefHeight="277.0" prefWidth="278.0">
+        <columns>
+          <TableColumn fx:id="titreSujet" prefWidth="168.0" text="Titre Sujet" />
+            <TableColumn fx:id="dateSuj" prefWidth="109.0" text="Date" />
+            <TableColumn fx:id="SujetId" minWidth="0.0" prefWidth="51.0" text="id" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tabComm" layoutX="306.0" layoutY="48.0" prefHeight="321.0" prefWidth="446.0">
+        <columns>
+          <TableColumn fx:id="textComm" prefWidth="178.0" text="Text Commentaire" />
+          <TableColumn fx:id="userComm" prefWidth="167.0" text="Utilisateur" />
+            <TableColumn fx:id="dateCol" prefWidth="99.0" text="Date" />
+            <TableColumn fx:id="MailCol" minWidth="0.0" prefWidth="59.0" text="Mail" />
+            <TableColumn fx:id="SujIdCol" minWidth="0.0" prefWidth="24.0" text="id Sujet" />
+            <TableColumn fx:id="idCom" minWidth="0.0" prefWidth="22.0" text="id" />
+        </columns>
+      </TableView>
+      <JFXButton layoutX="437.0" layoutY="490.0" onAction="#Retirer" prefHeight="31.0" prefWidth="233.0" style="-fx-background-color: #7EF423;" text="Retirer Commentaire" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></JFXButton>
+      <JFXButton layoutX="437.0" layoutY="538.0" onAction="#Signaler" prefHeight="31.0" prefWidth="233.0" style="-fx-background-color: #7EF423;" text="Signaler Commentaire" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></JFXButton>
+      <JFXButton layoutX="44.0" layoutY="397.0" onAction="#Desactiver" prefHeight="31.0" prefWidth="193.0" style="-fx-background-color: #7EF423;" text="Desactiver Sujet" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></JFXButton>
+      <JFXTextField fx:id="rechComTxt" focusColor="#6886e1" layoutX="35.0" layoutY="329.0" onMouseClicked="#RechComm" prefHeight="31.0" prefWidth="135.0" unFocusColor="#7ef423" />
+      <JFXTextField fx:id="comidcache" layoutX="214.0" layoutY="331.0" prefHeight="25.0" prefWidth="46.0" visible="false" />
+      <JFXTextField fx:id="MailCache" layoutX="265.0" layoutY="344.0" visible="false" />
+      <JFXButton layoutX="437.0" layoutY="397.0" onAction="#AfficherSignal" prefHeight="25.0" prefWidth="233.0" style="-fx-background-color: #7EF423;" text="Afficher Commentaires Signalés" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="437.0" layoutY="444.0" onAction="#AfficherTout" prefHeight="31.0" prefWidth="233.0" style="-fx-background-color: #7EF423;" text="Afficher Tout les Commentaire" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="44.0" layoutY="444.0" onAction="#sujpasDispo" prefHeight="31.0" prefWidth="193.0" style="-fx-background-color: #7EF423;" text="Afficher Sujets Desactivés" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="RetA" layoutX="14.0" layoutY="9.0" onAction="#RetA" prefHeight="18.0" prefWidth="68.0" style="-fx-background-color: #7EF423;" text="Retour" textFill="WHITE" />
+      <JFXButton layoutX="44.0" layoutY="538.0" onAction="#statistique" prefHeight="25.0" prefWidth="193.0" style="-fx-background-color: #7EF423;" text="Statistique" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="44.0" layoutY="490.0" onAction="#toutSuj" prefHeight="31.0" prefWidth="193.0" style="-fx-background-color: #7EF423;" text="Afficher Tout les Sujets" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

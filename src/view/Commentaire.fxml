@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="606.0" prefWidth="765.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CommentaireController">
+   <children>
+      <JFXTextField fx:id="txtTitre" layoutX="66.0" layoutY="52.0" prefHeight="44.0" prefWidth="383.0" text="Titre :" unFocusColor="#7ef423">
+         <font>
+            <Font size="25.0" />
+         </font></JFXTextField>
+      <Label layoutX="27.0" layoutY="398.0" prefHeight="25.0" prefWidth="39.0" text="Text">
+         <font>
+            <Font size="19.0" />
+         </font></Label>
+      <JFXTextArea fx:id="TextText" focusColor="#2196f3" layoutX="72.0" layoutY="423.0" prefHeight="102.0" prefWidth="536.0" unFocusColor="#7ef423" />
+      <JFXButton fx:id="Com" buttonType="RAISED" layoutX="564.0" layoutY="545.0" onAction="#AjoutCom" prefHeight="44.0" prefWidth="170.0" style="-fx-background-color: #7EF423;" text="Ajouter Commentaire" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></JFXButton>
+      <Label fx:id="errTEXT" layoutX="57.0" layoutY="535.0" prefHeight="32.0" prefWidth="480.0" />
+      <JFXTextField fx:id="idTXT" focusColor="#2196f3" layoutX="676.0" layoutY="286.0" prefHeight="25.0" prefWidth="52.0" unFocusColor="#7ef423" visible="false" />
+      <JFXButton buttonType="RAISED" layoutX="31.0" layoutY="14.0" onAction="#RetAvant" style="-fx-background-color: #7EF423;" text="Retour" textFill="#fffefe" />
+      <ImageView fx:id="imgShoww" fitHeight="135.0" fitWidth="207.0" layoutX="527.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+      <JFXTextField fx:id="imgTESTER" layoutX="609.0" layoutY="14.0" prefHeight="25.0" prefWidth="112.0" visible="false" />
+      <TableView fx:id="tab1" layoutX="14.0" layoutY="151.0" prefHeight="240.0" prefWidth="652.0">
+        <columns>
+          <TableColumn fx:id="Forumtxt" prefWidth="283.0" text="Commentaire" />
+          <TableColumn fx:id="idCol" prefWidth="22.0" text="Id Commentaire" visible="false" />
+            <TableColumn fx:id="userCol" prefWidth="100.0" text="User Name" />
+            <TableColumn fx:id="MailCol" prefWidth="244.0" text="Mail" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="Xefface" layoutX="673.0" layoutY="204.0" onAction="#RetirerCom" prefHeight="32.0" prefWidth="79.0" style="-fx-background-color: #7ef423;" text="Supprimer" textFill="WHITE" />
+      <JFXTextField fx:id="idcomm" layoutX="682.0" layoutY="334.0" prefHeight="25.0" prefWidth="52.0" visible="false" />
+      <JFXButton layoutX="673.0" layoutY="255.0" onAction="#Signal" prefHeight="32.0" prefWidth="79.0" style="-fx-background-color: #7ef423;" text="Signaler" textFill="WHITE" />
+      <JFXTextField fx:id="userCacher2" layoutX="679.0" layoutY="385.0" prefHeight="25.0" prefWidth="59.0" visible="false" />
+      <JFXTextField fx:id="mailCacher" layoutX="268.0" layoutY="119.0" prefHeight="25.0" prefWidth="214.0" visible="false" />
+      <Label fx:id="errTitre" layoutX="69.0" layoutY="111.0" prefHeight="32.0" prefWidth="410.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="720.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="controller.AccueilOrganisateurController">
+   <children>
+      <JFXButton fx:id="ajoutr_btn" layoutX="285.0" layoutY="184.0" prefHeight="75.0" prefWidth="150.0" style="-fx-background-color: #7EF423;" text="Ajouter une Randonnée" textFill="WHITE" />
+      <JFXButton fx:id="ran_btn" layoutX="285.0" layoutY="307.0" prefHeight="75.0" prefWidth="150.0" style="-fx-background-color: #7EF423;" text="Gestion des Randonnées" textFill="WHITE" />
+      <JFXButton fx:id="retour_btn" layoutX="637.0" layoutY="561.0" style="-fx-background-color: #7EF423;" text="Retour" textFill="WHITE" />
+   </children>
+</AnchorPane>

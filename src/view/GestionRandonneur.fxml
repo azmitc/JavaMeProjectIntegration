@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="472.0" prefWidth="600.0" style="-fx-background-color: white;" stylesheets="@JMetroDarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GestionRandonneurController">
+   <children>
+      <SplitPane dividerPositions="0.5" layoutX="25.0" layoutY="20.0" prefHeight="400.0" prefWidth="600.0" style="-fx-border-color: black; -fx-border-width: 2px;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="personsTable" layoutX="13.0" layoutY="72.0" prefHeight="344.0" prefWidth="270.0">
+                    <columns>
+                      <TableColumn fx:id="LoginColonne" prefWidth="75.0" text="LOGIN" />
+                      <TableColumn fx:id="MailColonne" prefWidth="104.0" text="MAIL" />
+                        <TableColumn fx:id="fideliteCol" prefWidth="85.0" text="Points fidelite" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <JFXTextField fx:id="txt_rechercher" focusColor="#2196f3" labelFloat="true" layoutX="14.0" layoutY="25.0" onKeyReleased="#RechercherAction" promptText="Recherche multicriteres" unFocusColor="#7ef423" />
+                  <JFXButton fx:id="btn_retour" buttonType="RAISED" layoutX="82.0" layoutY="419.0" text="Retour" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="430.0" prefWidth="297.0" style="-fx-background-color: white;">
+               <children>
+                  <JFXTextField fx:id="txt_cin" editable="false" focusColor="#2196f3" labelFloat="true" layoutX="29.0" layoutY="29.0" promptText="CIN" unFocusColor="#7ef423" />
+                  <JFXTextField fx:id="txt_mail" editable="false" focusColor="#2196f3" labelFloat="true" layoutX="29.0" layoutY="128.0" promptText="Mail" unFocusColor="#7ef423" />
+                  <JFXButton fx:id="btn_modif" buttonType="RAISED" layoutX="14.0" layoutY="174.0" onAction="#modif_Action" text="Modifier" visible="false" />
+                  <JFXButton fx:id="btn_supprimer" buttonType="RAISED" layoutX="89.0" layoutY="174.0" onAction="#Supprimer_Action" text="Supprimer" textFill="#fffbfb" />
+                  <JFXButton fx:id="btn_pie" buttonType="RAISED" layoutX="86.0" layoutY="229.0" text="Statistiques" />
+                  <Label layoutX="223.0" layoutY="60.0" prefHeight="17.0" prefWidth="61.0" text="Randonni" textFill="#0b7c20">
+                     <font>
+                        <Font name="System Italic" size="13.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="62.0" fitWidth="50.0" layoutX="228.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../pics/logo.png" />
+                     </image>
+                  </ImageView>
+                  <JFXTextField fx:id="txt_phone" editable="false" focusColor="#7ef423" labelFloat="true" layoutX="29.0" layoutY="79.0" promptText="Phone" unFocusColor="#2196f3" />
+                  <ImageView fx:id="photo" fitHeight="112.0" fitWidth="135.0" layoutX="80.0" layoutY="289.0" pickOnBounds="true" preserveRatio="true" />
+                  <JFXTextField fx:id="url_img" layoutX="80.0" layoutY="320.0" visible="false" />
+                  <JFXButton fx:id="pdf" buttonType="RAISED" layoutX="198.0" layoutY="407.0" onAction="#pdf" prefHeight="33.0" prefWidth="82.0" style="-fx-background-color: #2196f3;" text="PDF" />
+                  <JFXButton fx:id="btn_excel" buttonType="RAISED" layoutX="25.0" layoutY="407.0" onAction="#export" style="-fx-background-color: #2196f3;" text="Excel" />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

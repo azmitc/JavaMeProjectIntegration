@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ChatInsController">
+   <children>
+      <JFXTextField fx:id="ecrirTxt" focusColor="#3761dd" layoutX="92.0" layoutY="287.0" onAction="#helloReso" prefHeight="25.0" prefWidth="322.0" promptText="Ecrire Ici votre Message" unFocusColor="#7ef423" />
+      <JFXTextArea fx:id="ResultTxt" focusColor="#476cdd" layoutX="92.0" layoutY="65.0" unFocusColor="#7ef423" />
+      <Label layoutX="74.0" layoutY="14.0" prefHeight="61.0" prefWidth="330.0" text="Discussion :" textFill="#7ef423">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

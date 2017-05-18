@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="453.0" prefWidth="871.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReservationController">
+   <children>
+      <TableView fx:id="table_reserv" layoutX="64.0" layoutY="70.0" prefHeight="200.0" prefWidth="777.0">
+        <columns>
+          <TableColumn fx:id="column_img" prefWidth="41.0" text="image" />
+          <TableColumn fx:id="column_datedebt" prefWidth="47.0" text="date_deb" />
+            <TableColumn fx:id="column_date_fin" prefWidth="58.0" text="date_fin" />
+            <TableColumn fx:id="column_hredep" prefWidth="53.0" text="hre_dep" />
+            <TableColumn fx:id="column_hre_ret" prefWidth="59.0" text="hre_ret" />
+            <TableColumn fx:id="column_prix" prefWidth="51.0" text="prix" />
+            <TableColumn fx:id="column_nbrpl" prefWidth="48.0" text="nbrepl" />
+            <TableColumn fx:id="column_lieu" prefWidth="44.0" text="lieu" />
+            <TableColumn fx:id="column_circuit" prefWidth="46.0" text="circuit" />
+            <TableColumn fx:id="column_niveau" prefWidth="48.0" text="niveau" />
+            <TableColumn fx:id="column_equip" prefWidth="36.0" text="equip" />
+            <TableColumn fx:id="column_descri" prefWidth="38.0" text="desc" />
+            <TableColumn fx:id="column_cat" prefWidth="47.0" text="categorie" />
+            <TableColumn fx:id="column_note" prefWidth="40.0" text="note" />
+            <TableColumn fx:id="column_auto" prefWidth="33.0" text="autori" />
+            <TableColumn fx:id="column_gui" prefWidth="27.0" text="guid" />
+            <TableColumn fx:id="column_org" prefWidth="75.0" text="orgId" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="back" buttonType="RAISED" layoutX="187.0" layoutY="303.0" onAction="#back" prefHeight="25.0" prefWidth="115.0" style="-fx-background-color: #7ef423;" text="Back" textFill="#f5f5f5" />
+      <JFXButton fx:id="btn_reserv" buttonType="RAISED" layoutX="343.0" layoutY="303.0" prefHeight="25.0" prefWidth="151.0" style="-fx-background-color: #7ef423;" text="Resrver et Payer plus tard" textFill="#fcfafa" />
+      <Label layoutX="277.0" layoutY="22.0" prefHeight="17.0" prefWidth="254.0" text="Slectionner Randonnée">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

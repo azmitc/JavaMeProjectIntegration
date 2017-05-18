@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AfficheRandonneeController">
+   <children>
+      <TableView fx:id="randonneetable" layoutX="6.0" layoutY="141.0" prefHeight="271.0" prefWidth="708.0">
+        <columns>
+          <TableColumn fx:id="dd_col" prefWidth="75.0" text="Date Départ" />
+          <TableColumn fx:id="dr_col" prefWidth="64.0" text="Date Retour" />
+            <TableColumn fx:id="hd_col" text="Heure Depart" />
+            <TableColumn fx:id="hr_col" prefWidth="68.0" text="Heure Retour" />
+            <TableColumn fx:id="desc_col" prefWidth="91.0" text="Description" />
+            <TableColumn fx:id="prix_col" prefWidth="67.0" text="Prix" />
+            <TableColumn fx:id="lieu_col" prefWidth="56.0" text="Lieu" />
+            <TableColumn fx:id="niveau_col" prefWidth="63.0" text="Niveau" />
+            <TableColumn fx:id="cat_col" prefWidth="101.0" text="Catégorie" />
+            <TableColumn fx:id="id_col" prefWidth="75.0" text="Id" visible="false" />
+            <TableColumn fx:id="equip_col" prefWidth="23.0" text="Equipements" />
+            <TableColumn fx:id="img_col" prefWidth="33.0" text="Image" visible="false" />
+            <TableColumn fx:id="cir_col" prefWidth="75.0" text="Circuit" />
+            <TableColumn fx:id="nbpl_col" prefWidth="75.0" text="Nombre de Place" />
+        </columns>
+      </TableView>
+      <TextField fx:id="id_txt" editable="false" layoutX="14.0" layoutY="14.0" visible="false" />
+      <JFXButton fx:id="modif_btn" layoutX="640.0" layoutY="466.0" onAction="#Modifier" style="-fx-background-color: #7EF423;" text="Modifier" textFill="WHITE" />
+      <JFXButton fx:id="supp_btn" layoutX="634.0" layoutY="434.0" onAction="#Supprimer" style="-fx-background-color: #7EF423;" text="Supprimer" textFill="WHITE" />
+      <JFXTextField fx:id="lieu_txt" labelFloat="true" layoutX="360.0" layoutY="69.0" onKeyReleased="#recherche" />
+      <JFXTextField fx:id="image_txt" editable="false" layoutX="580.0" layoutY="27.0" visible="false" />
+      <ImageView fx:id="img_view" fitHeight="162.0" fitWidth="207.0" layoutX="245.0" layoutY="424.0" pickOnBounds="true" preserveRatio="true" />
+      <JFXButton fx:id="maps_btn" layoutX="648.0" layoutY="505.0" onAction="#MapsG" style="-fx-background-color: #7EF423;" text="maps" textFill="WHITE" />
+      <JFXComboBox fx:id="rech_cb" labelFloat="true" layoutX="245.0" layoutY="69.0" prefHeight="25.0" prefWidth="102.0" />
+      <JFXTextField editable="false" labelFloat="true" layoutX="77.0" layoutY="69.0" prefHeight="25.0" prefWidth="158.0" text="Rechercher des Randonnées :" />
+      <JFXButton fx:id="retour_btn" layoutX="645.0" layoutY="561.0" style="-fx-background-color: #7EF423;" text="Retour" textFill="WHITE" />
+       </children>
+</AnchorPane>

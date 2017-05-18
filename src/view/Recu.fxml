@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RecuController">
+   <children>
+      <TableView fx:id="tabel_reserv" layoutX="31.0" layoutY="55.0" prefHeight="200.0" prefWidth="484.0">
+        <columns>
+          <TableColumn fx:id="column_capacite" prefWidth="57.0" text="capacite" />
+          <TableColumn fx:id="column_nbrejre" prefWidth="72.0" text="nbrejour" />
+            <TableColumn fx:id="column_nbrepl" prefWidth="72.0" text="nombreplace" />
+            <TableColumn fx:id="column_dateres" prefWidth="62.0" text="datesresvation" />
+            <TableColumn fx:id="column_prix" prefWidth="68.0" text="prix" />
+            <TableColumn fx:id="column_remise" prefWidth="75.0" text="remise" />
+            <TableColumn fx:id="column_total" prefWidth="75.0" text="total" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btn_imprimer" buttonType="RAISED" layoutX="118.0" layoutY="274.0" onAction="#imprimer" prefHeight="25.0" prefWidth="105.0" style="-fx-background-color: #7ef423;" text="ImprimerRecu" textFill="#f5f0f0" />
+      <Label layoutX="130.0" layoutY="7.0" prefHeight="17.0" prefWidth="170.0" text="Recu">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btn_retour" buttonType="RAISED" layoutX="240.0" layoutY="274.0" onAction="#back" prefHeight="25.0" prefWidth="105.0" style="-fx-background-color: #7ef423;" text="retour" textFill="#fcfcfc" />
+      <ImageView fitHeight="27.0" fitWidth="22.0" layoutX="240.0" layoutY="276.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pics/arrow_left_circle-128.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="27.0" fitWidth="22.0" layoutX="119.0" layoutY="276.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pics/23-128.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

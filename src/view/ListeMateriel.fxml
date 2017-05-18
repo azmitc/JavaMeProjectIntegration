@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="347.0" prefWidth="928.0" styleClass="background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ListeMaterielController">
+   <children>
+      <TextField fx:id="txt_type" layoutX="63.0" layoutY="311.0" promptText="type" visible="false" />
+      <TextField fx:id="txt_etat" layoutX="279.0" layoutY="274.0" promptText="etat" visible="false" />
+      <TableView fx:id="table_mat" layoutY="-1.0" prefHeight="212.0" prefWidth="450.0">
+         <columns>
+            <TableColumn fx:id="col_nom" prefWidth="75.0" text="nom" />
+            <TableColumn fx:id="col_ref" prefWidth="75.0" text="reference" />
+            <TableColumn fx:id="col_prix" prefWidth="75.0" text="prix" />
+            <TableColumn fx:id="col_desc" prefWidth="75.0" text="description" />
+            <TableColumn fx:id="col_type" prefWidth="75.0" text="type" />
+            <TableColumn fx:id="col_quant" prefWidth="75.0" text="quantite" />
+            <TableColumn fx:id="col_pic" prefWidth="75.0" text="pic" />
+         </columns>
+         <effect>
+            <Glow />
+         </effect>
+      </TableView>
+      <Label layoutX="10.0" layoutY="228.0" text="Entrer la reference" />
+      <JFXTextField fx:id="rech_txt" focusColor="#7ef423" labelFloat="true" layoutX="115.0" layoutY="223.0" onKeyReleased="#rech" unFocusColor="#2196f3" />
+      <ImageView fx:id="imgToShow" fitHeight="129.0" fitWidth="268.0" layoutX="613.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" />
+      <JFXButton fx:id="resv_id" buttonType="RAISED" layoutX="316.0" layoutY="311.0" onAction="#res_handl" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #7EF423;" text="Reserver" textFill="WHITE" />
+      <JFXButton fx:id="btn_retour" layoutX="37.0" layoutY="299.0" onAction="#retour" style="-fx-background-color: #7EF423;" text="Retour" textFill="WHITE" />
+      <JFXTextField fx:id="ss" layoutX="686.0" layoutY="248.0" visible="false" />
+   </children>
+</AnchorPane>

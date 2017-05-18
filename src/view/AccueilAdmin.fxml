@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="720.0" styleClass="background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AccueilAdminController">
+   <children>
+      <JFXButton fx:id="ajoutcr_btn" layoutX="232.0" layoutY="148.0" prefHeight="46.0" prefWidth="246.0" style="-fx-background-color: #7EF423;" text="Ajouter Une Categories " textFill="WHITE" />
+      <JFXButton fx:id="valid_btn" layoutX="232.0" layoutY="77.0" prefHeight="46.0" prefWidth="246.0" style="-fx-background-color: #7EF423;" text="Valider Randonnee" textFill="WHITE" />
+      <JFXButton fx:id="retour_btn" layoutX="645.0" layoutY="561.0" style="-fx-background-color: #7EF423;" text="Retour" textFill="WHITE" />
+      <JFXButton fx:id="cat_btn" layoutX="232.0" layoutY="217.0" prefHeight="46.0" prefWidth="246.0" style="-fx-background-color: #7EF423;" text="Gestion Categorie" textFill="WHITE" />
+      <JFXButton fx:id="pie" layoutX="232.0" layoutY="293.0" prefHeight="46.0" prefWidth="246.0" style="-fx-background-color: #7EF423;" text="Statistique" textFill="WHITE" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" stylesheets="@JMetroDarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EnvoyerMailController">
+   <children>
+      <JFXTextArea fx:id="txt_msg" focusColor="#2196f3" labelFloat="true" layoutX="49.0" layoutY="160.0" promptText="Ecrire votre message" unFocusColor="#7ef423" />
+      <JFXTextField fx:id="txt_mail" focusColor="#2196f3" labelFloat="true" layoutX="46.0" layoutY="34.0" promptText="Mail" unFocusColor="#7ef423" />
+      <JFXPasswordField fx:id="txt_psw" focusColor="#2196f3" labelFloat="true" layoutX="46.0" layoutY="78.0" promptText="Mot de passe" unFocusColor="#7ef423" />
+      <JFXButton fx:id="btn_envoyer" buttonType="RAISED" layoutX="275.0" layoutY="343.0" text="Envoyer" />
+      <JFXTextField fx:id="txt_sujet" focusColor="#2196f3" labelFloat="true" layoutX="46.0" layoutY="115.0" promptText="Sujet" unFocusColor="#7ef423" />
+      <JFXButton fx:id="btn_retour" buttonType="RAISED" layoutX="114.0" layoutY="343.0" prefHeight="33.0" prefWidth="93.0" text="Retour" />
+   </children>
+</AnchorPane>

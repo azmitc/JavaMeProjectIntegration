@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.net.*?>
+<?import javafx.scene.effect.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <children>
+      <JFXTextField fx:id="txt_username" focusColor="#09b6bc" layoutX="229.0" layoutY="127.0" prefHeight="34.0" prefWidth="135.0" promptText="Nom d'utilisateur" unFocusColor="#7ef423" />
+      <JFXPasswordField fx:id="txt_pwd" focusColor="#09b6bc" layoutX="229.0" layoutY="188.0" promptText="Mot de passe" unFocusColor="#7ef423" />
+      <JFXButton fx:id="btn_connect" buttonType="RAISED" layoutX="202.0" layoutY="274.0" prefHeight="34.0" prefWidth="85.0" ripplerFill="WHITE" style="-fx-background-color: #7EF423;" text="Se connecter" textFill="WHITE" />
+      <JFXButton fx:id="btn_inscription" buttonType="RAISED" layoutX="316.0" layoutY="274.0" prefHeight="34.0" prefWidth="85.0" ripplerFill="WHITE" style="-fx-background-color: #2196f3;" text="S'inscrire" textFill="WHITE" />
+      <Label layoutX="266.0" layoutY="71.0" prefHeight="17.0" prefWidth="61.0" text="Randonni" textFill="#0b7c20">
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="62.0" fitWidth="50.0" layoutX="266.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pics/logo.png" />
+         </image>
+      </ImageView>
+      <Hyperlink fx:id="forget_psw" layoutX="235.0" layoutY="232.0" text="mot de passe oublié ?" />
+   </children>
+   <effect>
+      <DropShadow blurType="GAUSSIAN" />
+   </effect>
+   
+</AnchorPane>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="606.0" prefWidth="788.0" styleClass="background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AccueilAhmedController">
+   <children>
+      <JFXButton fx:id="NoteRando" buttonType="RAISED" contentDisplay="CENTER" layoutX="273.0" layoutY="444.0" prefHeight="73.0" prefWidth="275.0" style="-fx-background-color: #7EF423;" text="Noter Randonnée" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btn_add" buttonType="RAISED" contentDisplay="CENTER" layoutX="273.0" layoutY="117.0" prefHeight="73.0" prefWidth="275.0" style="-fx-background-color: #7EF423;" text="Ajouter Sujet" textFill="#fffbfb">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btn_display" buttonType="RAISED" contentDisplay="CENTER" layoutX="273.0" layoutY="225.0" prefHeight="73.0" prefWidth="275.0" style="-fx-background-color: #7EF423;" text="Gestion Commentaire" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="DiscIns" buttonType="RAISED" contentDisplay="CENTER" layoutX="272.0" layoutY="333.0" prefHeight="73.0" prefWidth="275.0" style="-fx-background-color: #7EF423;" text="Discussion Instantanée" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
