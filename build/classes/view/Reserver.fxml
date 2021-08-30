@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReserverController">
+   <children>
+      <ImageView fx:id="img_id" fitHeight="150.0" fitWidth="200.0" layoutX="368.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="28.0" layoutY="108.0" text="Prix unitaire" />
+      <Label layoutX="24.0" layoutY="144.0" text="Quantite" />
+      <Label layoutX="135.0" layoutY="7.0" prefHeight="35.0" prefWidth="241.0" text="Commande :" />
+      <JFXTextField fx:id="txt_prix" focusColor="#7ef423" layoutX="110.0" layoutY="104.0" unFocusColor="#2196f3" />
+      <JFXTextField fx:id="txt_quant" focusColor="#7ef423" layoutX="135.0" layoutY="140.0" unFocusColor="#2196f3" />
+      <DatePicker fx:id="date_txt" layoutX="135.0" layoutY="188.0" visible="false" />
+      <JFXButton fx:id="vld_btn" layoutX="494.0" layoutY="355.0" onAction="#add_Res" prefHeight="25.0" prefWidth="81.0" style="-fx-background-color: #7EF423;" text="Valider" textFill="WHITE" />
+      <TextField fx:id="txt_id" layoutX="17.0" layoutY="228.0" visible="false" />
+      <JFXButton fx:id="ret_btn" buttonType="RAISED" layoutX="14.0" layoutY="355.0" onAction="#retour" style="-fx-background-color: #7EF423;" text="Retour" textFill="WHITE" />
+      <JFXTextField fx:id="ss" layoutX="24.0" layoutY="253.0" visible="false" />
+      <TextField fx:id="qte_txt" layoutX="17.0" layoutY="266.0" visible="false" />
+      <JFXTextField fx:id="reslt" layoutX="14.0" layoutY="298.0" visible="false" />
+   </children>
+</AnchorPane>

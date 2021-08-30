@@ -7,7 +7,6 @@ package services;
 
 import entities.Guide;
 import entities.Materiel;
-import entities.Organisateur;
 import entities.Utilisateurs;
 import java.sql.Connection;
 import java.sql.PreparedStatement;

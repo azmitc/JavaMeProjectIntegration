@@ -258,7 +258,7 @@ roleCacher.setText(suj.getRole());
        suj.setTitre(titretxt.getText());  
       
        suj.setTheme((String) combotheme.getSelectionModel().getSelectedItem());
-        suj.setName_user((String) comboTxt.getSelectionModel().getSelectedItem()); 
+       // suj.setName_user((String) comboTxt.getSelectionModel().getSelectedItem()); 
        suj.setText(texttxt.getText());
            suj.setPic(ss.getText());  
                //suj.setPic((String) listImg.getSelectionModel().getSelectedItem()); 

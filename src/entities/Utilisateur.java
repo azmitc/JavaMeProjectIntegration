@@ -91,7 +91,13 @@ public class Utilisateur  {
     public void setPhoto(String photo) {
         this.photo = photo;
     }
+ public String getImage() {
+        return photo;
+    }
 
+    public void setImage(String photo) {
+        this.photo = photo;
+    }
     public void setBirthday(Date birthday) {
         this.birthday = birthday;
     }

@@ -12,7 +12,7 @@ import java.util.Date;
  */
 public class Reclamation {
     private String id;
-    private String idUtilisateur;
+    private int idUtilisateur;
     private String idMateriel;
     private String typeReclamation;
     private String description;
@@ -24,7 +24,7 @@ public class Reclamation {
     public Reclamation() {
     }
 
-    public Reclamation(String idUtilisateur, String idMateriel, String typeReclamation, String description, Date dateAchat) {
+    public Reclamation(int idUtilisateur, String idMateriel, String typeReclamation, String description, Date dateAchat) {
         this.idUtilisateur = idUtilisateur;
         this.idMateriel = idMateriel;
         this.typeReclamation = typeReclamation;
@@ -33,7 +33,7 @@ public class Reclamation {
     }
     
 
-    public Reclamation(String description, String typeReclamation,Date dateAchat, Date dateEnvoi,String idUtilisateur,String idMateriel) {
+    public Reclamation(String description, String typeReclamation,Date dateAchat, Date dateEnvoi,int idUtilisateur,String idMateriel) {
         this.idUtilisateur = idUtilisateur;
         this.idMateriel = idMateriel;
         this.typeReclamation = typeReclamation;
@@ -41,7 +41,7 @@ public class Reclamation {
         this.dateAchat = dateAchat;
         this.dateEnvoi = dateEnvoi;
     }
-        public Reclamation(String description, String typeReclamation,Date dateAchat,String idUtilisateur,String idMateriel) {
+        public Reclamation(String description, String typeReclamation,Date dateAchat,int idUtilisateur,String idMateriel) {
         this.idUtilisateur = idUtilisateur;
         this.idMateriel = idMateriel;
         this.typeReclamation = typeReclamation;
@@ -50,7 +50,7 @@ public class Reclamation {
         this.dateEnvoi = dateEnvoi;
     }
 
-    public Reclamation(String idUtilisateur, String idMateriel, String typeReclamation, String description, Date dateAchat, Date dateEnvoi, String validitée) {
+    public Reclamation(int idUtilisateur, String idMateriel, String typeReclamation, String description, Date dateAchat, Date dateEnvoi, String validitée) {
         this.idUtilisateur = idUtilisateur;
         this.idMateriel = idMateriel;
         this.typeReclamation = typeReclamation;
@@ -61,7 +61,7 @@ public class Reclamation {
     }
     
 
-    public Reclamation(String id, String idUtilisateur,String idMateriel, String typeReclamation,String typeProb, String description, Date dateAchat, Date dateEnvoi, String validitée) {
+    public Reclamation(String id, int idUtilisateur,String idMateriel, String typeReclamation,String typeProb, String description, Date dateAchat, Date dateEnvoi, String validitée) {
         this.id = id;
         this.idUtilisateur = idUtilisateur;
         this.idMateriel = idMateriel;
@@ -82,11 +82,11 @@ public class Reclamation {
         this.id = id;
     }
 
-    public String getIdUtilisateur() {
+    public int getIdUtilisateur() {
         return idUtilisateur;
     }
 
-    public void setIdUtilisateur(String idUtilisateur) {
+    public void setIdUtilisateur(int idUtilisateur) {
         this.idUtilisateur = idUtilisateur;
     }
 

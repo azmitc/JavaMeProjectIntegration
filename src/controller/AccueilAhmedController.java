@@ -47,6 +47,8 @@ public class AccueilAhmedController implements Initializable {
     private JFXButton NoteRando;
     @FXML
     private JFXButton DiscIns;
+    @FXML
+    private JFXButton retour_btn;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -56,7 +58,18 @@ Sujet suj =new Sujet();
            // suj=comboTxt.getItems().get(comboTxt.getSelectionModel().getSelectedIndex()); 
 
 //suj.setId_user((String) comboTxt.getSelectionModel().getSelectedItem());
+    retour_btn.setOnAction(event -> {
 
+            try {
+                Parent page1 = FXMLLoader.load(getClass().getResource("/view/AccueilFront.fxml"));
+                Scene scene = new Scene(page1);
+                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                stage.setScene(scene);
+                stage.show();
+            } catch (IOException ex) {
+                Logger.getLogger(AccueilController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        });
         // TODO
         btn_add.setOnAction(event -> {
 

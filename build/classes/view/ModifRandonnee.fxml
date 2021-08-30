@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ModifRandonneeController">
+   <children>
+      <Label layoutX="98.0" layoutY="78.0" text="Prix" />
+      <Label layoutX="98.0" layoutY="128.0" text="Equipements" />
+      <Label layoutX="98.0" layoutY="183.0" text="Niveau" />
+      <Label layoutX="98.0" layoutY="234.0" text="Catégorie" />
+      <Label layoutX="102.0" layoutY="476.0" text="Description" />
+      <Label layoutX="210.0" layoutY="27.0" text="Modifier Randonnée">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="prix_txt" layoutX="233.0" layoutY="74.0" />
+      <JFXTextField fx:id="equip_txt" layoutX="233.0" layoutY="124.0" />
+      <JFXTextArea fx:id="desc_txt" layoutX="207.0" layoutY="464.0" prefHeight="96.0" prefWidth="188.0" />
+      <JFXComboBox fx:id="niveau_cb" layoutX="260.0" layoutY="179.0" />
+      <JFXComboBox fx:id="cat_cb" layoutX="260.0" layoutY="230.0" />
+      <JFXButton layoutX="634.0" layoutY="512.0" onAction="#Modifier" style="-fx-background-color: #7EF423;" text="Modifier" textFill="WHITE" />
+      <JFXButton fx:id="affiche_btn" layoutX="565.0" layoutY="561.0" style="-fx-background-color: #7EF423;" text="Retourner à l'Affichage" textFill="WHITE" />
+      <JFXTextField fx:id="id_txt" editable="false" layoutX="437.0" layoutY="62.0" visible="false" />
+      <JFXDatePicker fx:id="dd_pic" layoutX="532.0" layoutY="73.0" />
+      <JFXDatePicker fx:id="dr_pic" layoutX="532.0" layoutY="135.0" />
+      <JFXDatePicker fx:id="hd_pic" layoutX="532.0" layoutY="200.0" showTime="true" />
+      <JFXDatePicker fx:id="hr_pic" layoutX="532.0" layoutY="273.0" showTime="true" />
+      <JFXTextField fx:id="lieu_txt" layoutX="221.0" layoutY="300.0" />
+      <JFXTextField fx:id="cir_txt" layoutX="221.0" layoutY="360.0" />
+      <JFXTextField fx:id="nbrplace_txt" layoutX="221.0" layoutY="417.0" />
+      <Label layoutX="104.0" layoutY="304.0" text="Lieu" />
+      <Label layoutX="104.0" layoutY="364.0" text="Circuit" />
+      <Label layoutX="92.0" layoutY="421.0" text="Nombre de place" />
+      <Label layoutX="419.0" layoutY="79.0" prefHeight="17.0" prefWidth="69.0" text="Date Depart" />
+      <Label layoutX="419.0" layoutY="141.0" text="Date Retour" />
+      <Label layoutX="418.0" layoutY="206.0" text="Heure Depart" />
+      <Label layoutX="419.0" layoutY="279.0" text="Heure Retour" />
+   </children>
+</AnchorPane>

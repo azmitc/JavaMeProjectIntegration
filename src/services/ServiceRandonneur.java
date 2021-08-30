@@ -49,7 +49,7 @@ public class ServiceRandonneur implements Idao<Randonneur> {
     
     @Override
     public void insert(Randonneur p) {
-   String requete="INSERT INTO `utilisateur` (`nom`, `prenom`, `num_tel`,`cin`,`email`,`username`,`password`,`roles`,`birthday`,`image_name`,`pt_fidel`) values (?,?,?,?,?,?,?,?,?,?,?)";
+   String requete="INSERT INTO `utilisateur` (`nom`, `prenom`, `num_tel`,`cin`,`email`,`email_canonical`,`username`,`username_canonical`,`password`,`roles`,`birthday`,`image_name`,`pt_fidel`,`enabled`) values (?,?,?,?,?,?,?,?,?,?,?,?,?,1)";
 try {
             PreparedStatement ps = cs.getCnx().prepareStatement(requete);
             ps.setString(1, p.getNom());
@@ -58,13 +58,14 @@ try {
           
             ps.setString(4, p.getCin());
             ps.setString(5, p.getMail());
-            ps.setString(6, p.getUser_name());
-            ps.setString(7, p.getPwd());
-            ps.setString(8, p.getRole());
-            ps.setString(8, p.getRole());
-            ps.setDate(9, (Date) p.getBirthday());
-            ps.setString(10, p.getPhoto());
-            ps.setInt(11,p.getPt_fidel());
+              ps.setString(6, p.getMail());
+            ps.setString(7, p.getUser_name());
+            ps.setString(9, p.getPwd());
+            ps.setString(10, p.getRole());
+            ps.setString(8, p.getUser_name());
+            ps.setDate(11, (Date) p.getBirthday());
+            ps.setString(12, p.getPhoto());
+            ps.setInt(13,p.getPt_fidel());
             //ps.executeUpdate();
                       System.out.println(requete);
             ps.executeUpdate();

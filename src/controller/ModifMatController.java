@@ -93,16 +93,12 @@ public class ModifMatController implements Initializable {
 
     @FXML
     private void ModifMat(ActionEvent event) {
-       boolean isnotAlphNom=validation. TextFieldValidation.textalphabet(txt_nom, nom_err, "Il faut remplir avec des alphabets");
-       boolean isnotAlphDesc=validation. TextFieldValidation.textalphabet(txt_desc, desc_err, "Il faut remplir avec des alphabets");
+/*      boolean isnotAlphNom=validation. TextFieldValidation.textalphabet(txt_nom, nom_err, "Il faut remplir avec des alphabets");       boolean isnotAlphDesc=validation. TextFieldValidation.textalphabet(txt_desc, desc_err, "Il faut remplir avec des alphabets");
        boolean isNumprix=validation. TextFieldValidation.texNum (txt_prix, prix_err, "Il faut remplir avec des numero");
        boolean isNumquant=validation. TextFieldValidation.texNum (txt_quant, quant_err, "Il faut remplir avec des numero");
        boolean isAlphaNumReft=validation. TextFieldValidation.texNum  (txt_ref, ref_err, "Il faut remplir avec des nums");
 
-if (isnotAlphNom)
-{
-nom_err.setText("");
-}
+
 if (isnotAlphDesc)
 {
 desc_err.setText("");
@@ -119,8 +115,8 @@ if (isAlphaNumReft)
 {
 ref_err.setText("");
 }
-        
-                       if ((isnotAlphNom)&&(isnotAlphDesc)&&(isNumprix)&&(isNumquant)&&(isAlphaNumReft)){
+    */    
+                     //  if ((isnotAlphDesc)&&(isNumprix)&&(isNumquant)&&(isAlphaNumReft)){
                            
 
         
@@ -161,7 +157,7 @@ ref_err.setText("");
         });
         notification.showConfirm();
          try {
-                Parent page1 = FXMLLoader.load(getClass().getResource("/pi/view/Ajout.fxml"));
+                Parent page1 = FXMLLoader.load(getClass().getResource("/view/Ajout.fxml"));
                 Scene scene = new Scene(page1);
                 Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 stage.setScene(scene);
@@ -169,7 +165,7 @@ ref_err.setText("");
             } catch (IOException ex) {
                 Logger.getLogger(AccueilController.class.getName()).log(Level.SEVERE, null, ex);
             }
-                       }
+                       
     //  afficherMat();
    /*   txt_ref.clear();
 txt_nom.clear();
@@ -182,7 +178,7 @@ txt_quant.clear();*/
     @FXML
     private void retour(ActionEvent event) {
          try {
-                Parent page1 = FXMLLoader.load(getClass().getResource("/pi/view/Ajout.fxml"));
+                Parent page1 = FXMLLoader.load(getClass().getResource("/view/Ajout.fxml"));
                 Scene scene = new Scene(page1);
                 Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 stage.setScene(scene);

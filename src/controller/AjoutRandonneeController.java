@@ -217,7 +217,7 @@ lieu_lbl.setText("");
                     r.setCategorie(a);
                    r.setAutorisation(ss1.getText());
                     r.setId_guide((String) guide_cb.getSelectionModel().getSelectedItem());
-                    r.setId_organisateur((String) org_cb.getSelectionModel().getSelectedItem());
+                   // r.setId_organisateur((String) org_cb.getSelectionModel().getSelectedItem());
                     
                     
                     sercr.insert(r);

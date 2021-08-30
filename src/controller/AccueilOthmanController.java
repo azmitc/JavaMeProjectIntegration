@@ -29,6 +29,8 @@ public class AccueilOthmanController implements Initializable {
     private JFXButton AdminBtn;
     @FXML
     private JFXButton RandoBtn;
+    @FXML
+    private JFXButton retour_btn;
 
     /**
      * Initializes the controller class.
@@ -47,7 +49,18 @@ public class AccueilOthmanController implements Initializable {
                 Logger.getLogger(AccueilController.class.getName()).log(Level.SEVERE, null, ex);
             }
         });
-       
+         retour_btn.setOnAction(event -> {
+
+            try {
+                Parent page1 = FXMLLoader.load(getClass().getResource("/view/AccueilFront.fxml"));
+                Scene scene = new Scene(page1);
+                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                stage.setScene(scene);
+                stage.show();
+            } catch (IOException ex) {
+                Logger.getLogger(AccueilController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        });
        
             RandoBtn.setOnAction(event -> {
 

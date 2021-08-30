@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="controller.MailController">
+   <children>
+      <Label layoutX="69.0" layoutY="50.0" text="De :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="321.0" layoutY="102.0" text="Mot de Passe :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="157.0" text="Destinataire  :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="80.0" layoutY="216.0" text="Objet :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="43.0" layoutY="265.0" text="Message :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="fromTxt" layoutX="125.0" layoutY="48.0" prefHeight="25.0" prefWidth="172.0" promptText="from" unFocusColor="#7ef423" />
+      <JFXTextField fx:id="pswTxt" layoutX="440.0" layoutY="100.0" promptText="pwd" unFocusColor="#7ef423" />
+      <JFXTextField fx:id="toTxt" layoutX="172.0" layoutY="155.0" prefHeight="25.0" prefWidth="226.0" promptText="Destinataire du mail" unFocusColor="#7ef423" />
+      <JFXTextField fx:id="subTxt" layoutX="155.0" layoutY="214.0" prefHeight="25.0" prefWidth="358.0" promptText="Objet du mail" unFocusColor="#7ef423" />
+      <JFXTextArea fx:id="msgTxt" layoutX="144.0" layoutY="265.0" prefHeight="75.0" prefWidth="307.0" promptText="                                                                                                                      Entrez Message" unFocusColor="#7ef423" />
+      <JFXButton layoutX="494.0" layoutY="346.0" onAction="#EnvoyerMail" prefHeight="30.0" prefWidth="79.0" style="-fx-background-color: #7EF423;" text="Envoyer" textFill="WHITE" />
+   </children>
+</AnchorPane>

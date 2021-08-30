@@ -8,7 +8,7 @@ package controller;
 import com.jfoenix.controls.JFXButton;
 import controller.AccueilController;
 import entities.Guide;
-import entities.Organisateur;
+
 import entities.Randonnee;
 import java.io.IOException;
 import java.net.URL;

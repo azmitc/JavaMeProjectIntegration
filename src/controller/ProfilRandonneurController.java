@@ -114,7 +114,11 @@ public class ProfilRandonneurController implements Initializable {
          txt_username.setText(ran.getUser_name());
          txt_pt_fidel.setText("" + ran.getPt_fidel());
          url_image.setText(ran.getPhoto());
+          Image a1=new Image("http://localhost/ImagePi/"+ran.getPhoto());
+ imgshow.setImage(a1);
         }
+        
+
         
 //        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 //        LocalDate d;
@@ -197,7 +201,11 @@ boolean MailValide=validation.TextFieldValidation.texMail(txt_mail, error_mail, 
 
         try {
             BufferedImage bufferedImage = ImageIO.read(file);
-
+/*   BufferedImage bufferedImage = ImageIO.read(selectedfile);
+            path_img = selectedfile.getName();
+            ss.setText(path_img);
+            WritableImage image = SwingFXUtils.toFXImage(bufferedImage, null);
+            imgshow.setImage(image);*/
             image = SwingFXUtils.toFXImage(bufferedImage, null);
            imgshow.setImage(image);
             url_image.setText(file.getName());

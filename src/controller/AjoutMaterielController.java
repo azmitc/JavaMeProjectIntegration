@@ -46,12 +46,14 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
+import javafx.scene.image.WritableImage;
 import javafx.scene.input.KeyEvent;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javax.imageio.ImageIO;
 import services.ServiceMateriel;
 import utils.MyImage;
+import utils.Upload;
 
 
 
@@ -239,11 +241,18 @@ public class AjoutMaterielController implements Initializable {
             txt_etat.setText(tl.getEtat());
             txt_id.setText(tl.getId());
             txt_quant.setText(tl.getQuantite());
-            
+            /*
             ss.setText(tl.getPic());
             String ide=ss.getText();
             imgToShow.setImage(MyImage.fromResources(ide));
-            //combo_etat.getValue()
+            //combo_etat.getValue()*/
+            
+             ss.setText(tl.getPic());
+Image img=new Image("http://localhost/ImagePi/"+tl.getPic());
+        System.out.println("------------------------------");
+        System.out.println("http://localhost/ImagePi/"+tl.getPic());
+        
+        imgToShow.setImage(img);
         }
     });
 
@@ -402,22 +411,33 @@ txt_quant.clear();
     }
 
     @FXML
-    private void AfficherImage(ActionEvent event) {
-        FileChooser fileChooser = new FileChooser();
-     //Set extension filter
-        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("*.jpg", "*.JPG", "*.png");
-        fileChooser.getExtensionFilters().addAll(extFilter);
-      //Show open file dialog
-        file = fileChooser.showOpenDialog(null);
+    private void AfficherImage(ActionEvent event) throws IOException {
+   
+              File selectedfile;
+        String path_img;
+        Upload up = new Upload();
 
-        try {
-            BufferedImage bufferedImage = ImageIO.read(file);
+        FileChooser fc = new FileChooser();
+        //fc.setInitialDirectory(new File ("C:\\Users\\user\\Desktop\\img"));
 
-            image = SwingFXUtils.toFXImage(bufferedImage, null);
-           imgToShow.setImage(image);
-            ss.setText(file.toURL().toString());
-        } catch (IOException ex) {
-            Logger.getLogger(AjoutMaterielController.class.getName()).log(Level.SEVERE, null, ex);
+        fc.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("Image", "*.jpg", "*.png", "*.PNG", "*.JPG")
+        );
+
+        selectedfile = fc.showOpenDialog(null);
+
+        if (selectedfile != null) {
+
+          
+            BufferedImage bufferedImage = ImageIO.read(selectedfile);
+            path_img = selectedfile.getName();
+            ss.setText(path_img);
+            WritableImage image = SwingFXUtils.toFXImage(bufferedImage, null);
+            imgToShow.setImage(image);
+          
+            up.upload(selectedfile);
+        } else {
+            System.out.println("FICHIER erroné");
         }
     }
 

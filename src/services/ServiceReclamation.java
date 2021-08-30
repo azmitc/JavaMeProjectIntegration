@@ -32,16 +32,17 @@ public class ServiceReclamation implements IReclamation {
          public void ajouterReclamation(   Reclamation Rec) {
              
         try {
-            String requete = "INSERT INTO `reclamation`( `description`, `typeReclamation`,  `date_achat`,`mailClient`, `refmateriel_id`)VALUES (?,?,?,?,?)";
+            String requete = "INSERT INTO `reclamation`( `description`, `typeReclamation`,  `date_achat`,`mailClient`, `refmateriel_id`,`idclient_id` )VALUES (?,?,?,?,?,?)";
              PreparedStatement ps = conn.getCnx().prepareStatement(requete);
             //ps.setString(1, Rec.getId());
            
             ps.setString(1, Rec.getDescription());
             ps.setString(2, Rec.getTypeReclamation());
             ps.setDate(3, (Date) Rec.getDateAchat());
-            ps.setString(4, Rec.getIdUtilisateur());
+            ps.setInt(4, Rec.getIdUtilisateur());
 
             ps.setString(5, Rec.getIdMateriel());
+              ps.setInt(6, Rec.getIdUtilisateur());
             System.out.println(ps);
 
             ps.executeUpdate();
@@ -63,7 +64,7 @@ public class ServiceReclamation implements IReclamation {
             while (result.next()) {
                Reclamation reclamation = new Reclamation();
                reclamation.setId(result.getString("id"));
-               reclamation.setIdUtilisateur(result.getString("mailClient"));
+               reclamation.setIdUtilisateur(result.getInt("idclient_id"));
                reclamation.setDescription(result.getString("description"));
                 reclamation.setTypeReclamation(result.getString("typeReclamation"));
                

@@ -100,6 +100,7 @@ ServiceGalerie g=new ServiceGalerie();
     @FXML
     private void choixImage(MouseEvent event) {
   String id=listGalerie.getSelectionModel().getSelectedItem();
+
 imgGalerie.setImage(MyImage.fromResources(id));
 
     }

@@ -35,6 +35,7 @@ import javafx.util.Duration;
 import org.controlsfx.control.Notifications;
 import static controller.AjoutMaterielController.file;
 import entities.Materiel;
+import entities.Randonneur;
 import entities.Reclamation;
 import services.ServiceMateriel;
 import services.ServiceReclamation;
@@ -120,8 +121,9 @@ if(isnotAlphDesc)
         String idM=(String) id_txt.getSelectionModel().getSelectedItem();
      
                
-        
-Reclamation r= new Reclamation(desc,reclamation,d,idC,idM) ;
+                Randonneur ran= AccueilFrontController.rand;
+
+Reclamation r= new Reclamation(desc,reclamation,d,ran.getId(),idM) ;
 
 
         ser.ajouterReclamation(r);

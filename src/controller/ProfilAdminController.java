@@ -106,6 +106,8 @@ public class ProfilAdminController implements Initializable {
          txt_verifpsw.setText(ad.getPwd());         
          txt_username.setText(ad.getUser_name());
          //url_image.setText(ad.getPhoto());
+                 Image a1=new Image("http://localhost/ImagePi/"+ad.getPhoto());
+ imgshow.setImage(a1);
      
 
 

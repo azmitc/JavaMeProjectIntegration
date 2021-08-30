@@ -71,7 +71,7 @@ public class ReserverController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
                 Materiel mat1= ListeMaterielController.mat;
 txt_prix.setText(mat1.getPrix());
-txt_id.setText(mat1.getReference());
+txt_id.setText(mat1.getId());
 qte_txt.setText(mat1.getQuantite());
 //ss.setText(mat1.get)
    ss.setText(mat1.getPic());
@@ -99,6 +99,7 @@ reservation R=new reservation (prix, quantite, idM,image,ran.getId());
 ServiceRandonneur s=new ServiceRandonneur();
 ser.ajouterReservation(R);
 s.updateptsfidelite(ran.getUser_name(),20);
+ran.setPt_fidel(ran.getPt_fidel()+20);
 /**************Notifications*********************************/
             Notifications notification = Notifications.create()
                 .title("Merci pour votre fidelite !")

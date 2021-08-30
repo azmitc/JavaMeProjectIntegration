@@ -6,6 +6,7 @@
 package services;
 
 
+import controller.LoginController;
 import entities.CategorieRandonnee;
 import entities.Randonnee;
 import java.sql.Connection;
@@ -76,7 +77,7 @@ private static SerRandonnee instance;
            ps.setString(12,p.getCategorie());
            ps.setString(13,p.getAutorisation());
            ps.setString(14,p.getId_guide());
-           ps.setString(15,p.getId_organisateur());
+           ps.setString(15,LoginController.adm.getUser_name());
             ps.setString(16,p.getImage());
           
     ps.executeUpdate();

@@ -46,7 +46,7 @@ public class ServiceMateriel implements IMateriel {
      
         try {
              
-            String req = "SELECT `reference` FROM `materiel`  ";
+            String req = "SELECT `id` FROM `materiel`  ";
               PreparedStatement ps;
            // ps = cs.prepareStatement(req);
            ps = cs.getCnx().prepareStatement(req);
@@ -58,7 +58,7 @@ public class ServiceMateriel implements IMateriel {
              while(rs.next())
             {
                 
-                String x=rs.getString("reference");
+                String x=rs.getString("id");
                 lst.add(x);
 
             }
@@ -76,7 +76,7 @@ public class ServiceMateriel implements IMateriel {
     
      public void ajouterMateriel(Materiel client) {
         try {
-            String requete = "INSERT INTO `materiel`(`nom`, `reference`, `prix`, `description`, `type`, `etat`, `quantite`,`pic`)VALUES (?,?,?,?,?,?,?,?)";
+            String requete = "INSERT INTO `materiel`(`nom`, `reference`, `prix`, `description`, `type`, `etat`, `quantite`,`image_name`)VALUES (?,?,?,?,?,?,?,?)";
             PreparedStatement ps = cs.getCnx().prepareStatement(requete);
             ps.setString(1, client.getNom());
             ps.setString(2, client.getReference());

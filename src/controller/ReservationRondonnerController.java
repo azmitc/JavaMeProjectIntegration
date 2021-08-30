@@ -80,7 +80,7 @@ public class ReservationRondonnerController implements Initializable {
        int v=p.getNote();
         String image=p.getImage();
         Date u=(Date) p.getDate_debut();
-        String v1=p.getId_guide();
+        String v1=p.getNiveau();
        txt_capacite.setText(v1);
         txt_prix.setText(prixx);
         txt_nombreplace.setText(pn);

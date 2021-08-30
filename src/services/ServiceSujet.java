@@ -5,6 +5,7 @@
  */
 package services;
 
+import controller.LoginController;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import entities.Sujet;
@@ -54,7 +55,7 @@ public class ServiceSujet {
  public ArrayList<Sujet> Affiches() {
         try {
         
-            String requete = "select * from sujet s inner join utilisateur u on s.name_user=u.username where disponibilite=0";
+            String requete = "select * from sujet s inner join utilisateur u on s.name_user=u.username where disponibilite=1";
             PreparedStatement ps;
             ps = connect.getCnx().prepareStatement(requete);
             ResultSet result = ps.executeQuery();
@@ -138,7 +139,7 @@ public class ServiceSujet {
             ps.setString(2, sujet.getTheme());
             ps.setString(4, sujet.getPic());
              ps.setString(3, sujet.getText()); 
-              ps.setString(5, sujet.getName_user()); 
+              ps.setString(5, LoginController.rand.getUser_name()); 
        
         
              ps.executeUpdate();

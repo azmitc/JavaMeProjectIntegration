@@ -55,6 +55,7 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import org.controlsfx.control.Notifications;
+import services.ServiceGuide;
 import services.ServiceOrganisateur;
 import static sun.security.jgss.GSSUtil.login;
 import utils.ConnexionSingleton;
@@ -94,14 +95,17 @@ public class FXMLController implements Initializable {
     private TableColumn<Organisateur, String> column_numtel;
     @FXML
     private TableColumn<Organisateur, String> column_cin;
-  
+    @FXML
+    private TableColumn<Organisateur, String> column_username;
+    @FXML
+    private TableColumn<Organisateur,String> column_pswd;
     @FXML
     private TableColumn<Organisateur, String> column_mail;
 
     @FXML
     private TableColumn<Organisateur, String> column_role;
    private ObservableList<Organisateur>data;
-ConnexionSingleton conn;
+  private ConnexionSingleton conn;
     private Statement ste;
     public ProgressIndicator prog;
    private ArrayList<Organisateur>organisateur;
@@ -116,7 +120,9 @@ ConnexionSingleton conn;
     private Label error_cin;
     @FXML
     private Label error_mail;
+    @FXML
     private Label error_username;
+    @FXML
     private Label error_pswd;
     @FXML
     private ComboBox  txt_role;
@@ -130,7 +136,7 @@ ConnexionSingleton conn;
     private TextField ss;
     private String pic;
     @FXML
-    private TableColumn<Organisateur,String> column_typeorg;
+    private TableColumn<?, ?> column_typeorg;
     @FXML
     private ComboBox txt_typeorg;
     @FXML
@@ -165,9 +171,9 @@ ConnexionSingleton conn;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
   
-         txt_role.getItems().setAll("admin","organisateur","Randonneur","Guide");
+         txt_role.getItems().setAll("admin","organisateur","Rondonneur","Guide");
        txt_typeorg.getItems().setAll("organipro","organiAgence","organinormal");
-        conn=ConnexionSingleton.getInstance();
+         conn=ConnexionSingleton.getInstance();
        data=FXCollections.observableArrayList();
          setcelltable();
     setmouseclick();
@@ -190,14 +196,16 @@ ConnexionSingleton conn;
             }
         };
         task.setOnSucceeded(e -> {
+
     column_nom.setCellValueFactory(new PropertyValueFactory<>("nom"));
     column_prenom.setCellValueFactory(new PropertyValueFactory<>("prenom"));
     column_numtel.setCellValueFactory(new PropertyValueFactory<>("num_tel"));
      column_cin.setCellValueFactory(new PropertyValueFactory<>("cin"));
      column_mail.setCellValueFactory(new PropertyValueFactory<>("mail"));
- 
+    column_username.setCellValueFactory(new PropertyValueFactory<>("user_name"));
+    column_pswd.setCellValueFactory(new PropertyValueFactory<>("pwd"));
      column_role.setCellValueFactory(new PropertyValueFactory<>("role"));
-     column_typeorg.setCellValueFactory(new PropertyValueFactory<>("typeOrganisateur"));
+          column_typeorg.setCellValueFactory(new PropertyValueFactory<>("typeOrganisateur"));
 table_user.setItems(FXCollections.observableArrayList(task.getValue()));
             
             prog.setVisible(false);
@@ -233,7 +241,8 @@ table_user.setItems(FXCollections.observableArrayList(task.getValue()));
     column_numtel.setCellValueFactory(new PropertyValueFactory<>("num_tel"));
      column_cin.setCellValueFactory(new PropertyValueFactory<>("cin"));
      column_mail.setCellValueFactory(new PropertyValueFactory<>("mail"));
- 
+    column_username.setCellValueFactory(new PropertyValueFactory<>("user_name"));
+    column_pswd.setCellValueFactory(new PropertyValueFactory<>("pwd"));
      column_role.setCellValueFactory(new PropertyValueFactory<>("role"));
      column_typeorg.setCellValueFactory(new PropertyValueFactory<>("typeOrganisateur"));
 table_user.setItems(FXCollections.observableArrayList(task.getValue()));
@@ -256,9 +265,10 @@ table_user.setItems(FXCollections.observableArrayList(task.getValue()));
     column_prenom.setCellValueFactory(new PropertyValueFactory<>("prenom"));
     column_numtel.setCellValueFactory(new PropertyValueFactory<>("num_tel"));
      column_cin.setCellValueFactory(new PropertyValueFactory<>("cin"));
-     column_mail.setCellValueFactory(new PropertyValueFactory<>("email"));
-
-     column_role.setCellValueFactory(new PropertyValueFactory<>("roles"));
+     column_mail.setCellValueFactory(new PropertyValueFactory<>("mail"));
+    column_username.setCellValueFactory(new PropertyValueFactory<>("user_name"));
+    column_pswd.setCellValueFactory(new PropertyValueFactory<>("pwd"));
+     column_role.setCellValueFactory(new PropertyValueFactory<>("role"));
       column_typeorg.setCellValueFactory(new PropertyValueFactory<>("typeOrganisateur"));
       
      
@@ -276,8 +286,12 @@ table_user.setOnMouseClicked((MouseEvent event) -> {
     txt_pswd.setText(tl.getPwd());
     ss.setText(tl.getImage());
     String id=ss.getText();
-    
-    imgshow.setImage(MyImage.fromResources(id));
+    Image img=new Image("http://localhost/ImagePi/"+tl.getImage());
+        System.out.println("------------------------------");
+        System.out.println("http://localhost/ImagePi/"+tl.getImage());
+        
+        imgshow.setImage(img);
+    //imgshow.setImage(MyImage.fromResources(id));
     
     
 });
@@ -422,15 +436,10 @@ afficherMat();
 
     @FXML
     private void handlemodifier(ActionEvent event) {
-            services.ServiceOrganisateur s=new ServiceOrganisateur();
+           services.ServiceOrganisateur s=new ServiceOrganisateur();
         String username=txt_username.getText();
-        String pswd=txt_pswd.getText();
-s.updateOrganisateur(username,pswd);
-Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Information Dialog");
-        alert.setHeaderText(null);
-        alert.setContentText("Delete succes!");
-        alert.show();
+        String nom=txt_nom.getText();
+s.updateOrganisateur(username,nom);
     afficherMat();
     
     }
@@ -460,7 +469,7 @@ Alert alert = new Alert(Alert.AlertType.INFORMATION);
   
              try {
                 System.out.println("testttttttttttttt");
-                Parent pagePieChart=FXMLLoader.load(getClass().getResource("/view/MAIL.fxml"));
+                Parent pagePieChart=FXMLLoader.load(getClass().getResource("/test/MAIL.fxml"));
                 Scene scene=new Scene(pagePieChart);
                 Stage stage=(Stage) ((Node) event.getSource())
                         .getScene()

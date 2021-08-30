@@ -131,7 +131,7 @@ public class ListeReclamationController implements Initializable {
       private void setmouseclick(){
     table_rec.setOnMouseClicked((MouseEvent event) -> {
     Reclamation tl=table_rec.getItems().get(table_rec.getSelectionModel().getSelectedIndex());
-    mail_txt.setText(tl.getIdUtilisateur());
+    mail_txt.setText(tl.getDescription());
     txt_id.setText(tl.getId());
     
 
@@ -226,7 +226,7 @@ public class ListeReclamationController implements Initializable {
     private void gomail_btn(ActionEvent event) {
         mat=table_rec.getItems().get(table_rec.getSelectionModel().getSelectedIndex());
         try {
-                Parent page1 = FXMLLoader.load(getClass().getResource("/view/Mail.fxml"));
+                Parent page1 = FXMLLoader.load(getClass().getResource("/view/EnvoyerMail.fxml"));
                 Scene scene = new Scene(page1);
                 Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 stage.setScene(scene);
@@ -283,7 +283,7 @@ public class ListeReclamationController implements Initializable {
             table.addCell(table_rec.getItems().get(i).getDescription());
             table.addCell(table_rec.getItems().get(i).getTypeReclamation());
             table.addCell(table_rec.getItems().get(i).getIdMateriel());
-            table.addCell(table_rec.getItems().get(i).getIdUtilisateur());
+           // table.addCell(table_rec.getItems().get(i).getIdUtilisateur());
            
         }
         document.add(Chunk.NEWLINE);
